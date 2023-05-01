@@ -1,6 +1,8 @@
 import React from 'react'
-import { CartState } from '../context/Context';
+import { CartState } from '../../context/Context';
 import { Link } from 'react-router-dom';
+import './Cart.css'
+
 
 const Cart = () => {
     const {
@@ -8,23 +10,27 @@ const Cart = () => {
         dispatch,
       } = CartState();
       
-// console.log(cart);
+console.log(cart);
   return (
-    <>
-    <Link to="/">Home</Link>
-    <button
+    <div class="cart-page">
+    <button className='cart-button'
     onClick={()=>
     dispatch({
       type:"CLEAR_CART"
     })}
     >Clear Cart</button>
+    {/* <button class="cart-button">Checkout</button> */}
+    <Link className='checkout-button' to='/checkout'>Checkout</Link>
     <div className='cart_page'>
         {cart.map((prod)=>(
             <div className='cart_items'>
               <img src={prod.image} alt="cart_item" />
-            <p>{prod.name}</p>
+              <div class="cart-item-details">
+              <p style={{ fontWeight: 'bold' }}>{prod.title}</p>
             <p>{prod.price}</p>
-            <button
+            </div>
+            <div class="cart-all-buttons">
+            <button className='cart-button'
             onClick={()=>
             dispatch({
                 type:"ADD_ONE_MORE",
@@ -34,8 +40,8 @@ const Cart = () => {
                 }
             })}
             >+</button>
-            <p>{prod.qty}</p>
-            <button
+            <p>Qty : {prod.qty}</p>
+            <button className='cart-button'
             onClick={()=>
             dispatch({
                 type:"DELETE_ONE_FROM_CART",
@@ -46,9 +52,10 @@ const Cart = () => {
             })}
             >-</button>
             </div>
+            </div>
         ))}
     </div>
-    </>
+    </div>
   )
 }
 
