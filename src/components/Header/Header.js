@@ -13,7 +13,7 @@ function Header() {
         <AiOutlineSearch className="search-icon" />
       </div>
       <div className="cart-icon">
-      <Link to="/cart"><AiOutlineShoppingCart /></Link>
+      <Link to="/cart"><AiOutlineShoppingCart size={42} /></Link>
       </div>
     </header>
   );
