@@ -1,4 +1,3 @@
-import { faker } from '@faker-js/faker';
 import { createContext, useContext, useReducer } from "react";
 import { cartReducer } from './Reducers';
 import productsData from '../db/data'
