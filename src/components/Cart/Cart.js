@@ -30,7 +30,7 @@ console.log(cart);
             <p>{prod.price}</p>
             </div>
             <div class="cart-all-buttons">
-            <button className='cart-button'
+            <button className='cart-add-delete-button'
             onClick={()=>
             dispatch({
                 type:"ADD_ONE_MORE",
@@ -41,7 +41,7 @@ console.log(cart);
             })}
             >+</button>
             <p>Qty : {prod.qty}</p>
-            <button className='cart-button'
+            <button className='cart-add-delete-button'
             onClick={()=>
             dispatch({
                 type:"DELETE_ONE_FROM_CART",

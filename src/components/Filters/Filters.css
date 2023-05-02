@@ -1,0 +1,36 @@
+.filters {
+    position: sticky;
+    top: 0;
+    color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 10px;
+    height: 80vh;
+    border:1px solid gray;
+    border-radius: 10px;
+  }
+  
+  .title {
+    margin-bottom: 30px;
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+
+.filters_options{
+    display: flex;
+    flex-direction: column;
+}  
+.filters_options span {
+    margin-bottom: 30px;
+}
+.link-cart-icon {
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  color: ;
+}

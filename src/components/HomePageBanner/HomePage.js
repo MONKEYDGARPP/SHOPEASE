@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./HomePage.css";
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,6 +25,7 @@ function HomePage() {
   return (
     <div className="home-page">
       <div className="image-carousel">
+      <Link to="/products">
         <div
           className="image-container"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -37,6 +39,7 @@ function HomePage() {
             />
           ))}
         </div>
+        </Link>
         <button className="arrow-button prev-button" onClick={handlePrevClick}>
           &lt;
         </button>
@@ -44,6 +47,7 @@ function HomePage() {
           &gt;
         </button>
       </div>
+      
     </div>
   );
 }

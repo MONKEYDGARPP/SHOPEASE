@@ -1,0 +1,11 @@
+.main_product_page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 5px;
+}
+.whole_product_page {
+    display: flex;
+    flex-direction: row;
+}

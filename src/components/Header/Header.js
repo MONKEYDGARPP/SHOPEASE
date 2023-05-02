@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <header className="header">
+      <Link to="/">
       <div className="logo">ShopEasy</div>
+      </Link>
       <div className="search-bar">
         <input type="text" placeholder="Search..." />
         <AiOutlineSearch className="search-icon" />
