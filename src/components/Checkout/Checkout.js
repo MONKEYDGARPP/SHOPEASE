@@ -7,8 +7,7 @@ import { CartState } from '../../context/Context';
 const Checkout = () => {
 
   const {
-    state: { cart },
-    dispatch,
+    state: { cart }
   } = CartState();
 
   // console.log(cart)
