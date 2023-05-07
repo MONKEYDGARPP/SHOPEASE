@@ -1,8 +1,8 @@
 import React from 'react'
 import { CartState } from "../../context/Context";
 import './Filters.css'
-import { Link } from 'react-router-dom';
-import { AiOutlineShoppingCart } from 'react-icons/ai';
+// import { Link } from 'react-router-dom';
+// import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const Filters = () => {
     const {
