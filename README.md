@@ -1,5 +1,5 @@
 ### ShopEase is a Ecommerce shopping website made with React 
-### [Live Demo Here](google.com)
+### [Live Demo Here](https://anirban-shopease.netlify.app/)
 ##Tech Stack Used
  - React
  - UseContext, useReducers
