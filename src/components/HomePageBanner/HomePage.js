@@ -1,53 +1,35 @@
-import React, { useState } from "react";
+import React from "react";
 import "./HomePage.css";
 import { Link } from 'react-router-dom';
-
+import banner from "./banner.png"
 function HomePage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = [
-    "https://images-eu.ssl-images-amazon.com/images/G/31/img23/Softlines_JWL_SH_GW_Assets/February_2023/BAU_UNREC/Federal/Shoes/Updated/Apay/Apay_3000._CB592918654_.jpg",
-    "https://images-eu.ssl-images-amazon.com/images/G/31/img21/VGSW/2023/Q2/PC_Hero_VG_BAU_Consoles_Apr1st-week_Unrec_2x._CB592233658_.jpg",
-  ];
+  // const images = [
+  //   "https://static.vecteezy.com/system/resources/previews/004/299/835/original/online-shopping-on-phone-buy-sell-business-digital-web-banner-application-money-advertising-payment-ecommerce-illustration-search-free-vector.jpg"
+  // ];
 
-  const handlePrevClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
+  // const handlePrevClick = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === 0 ? images.length - 1 : prevIndex - 1
+  //   );
+  // };
 
-  const handleNextClick = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
+  // const handleNextClick = () => {
+  //   setCurrentIndex((prevIndex) =>
+  //     prevIndex === images.length - 1 ? 0 : prevIndex + 1
+  //   );
+  // };
 
   return (
-    <div className="home-page">
-      <div className="image-carousel">
+    <div className="banner">
       <Link to="/products">
-        <div
-          className="image-container"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((imageUrl, index) => (
-            <img
-              key={index}
-              src={imageUrl}
-              alt="homepage_picture"
-              className="image"
-            />
-          ))}
-        </div>
-        </Link>
-        <button className="arrow-button prev-button" onClick={handlePrevClick}>
-          &lt;
-        </button>
-        <button className="arrow-button next-button" onClick={handleNextClick}>
-          &gt;
-        </button>
-      </div>
-      
+      <img
+        className="banner-image"
+        src={banner}
+        alt="Shopping App Banner"
+      />
+      </Link>
     </div>
   );
 }

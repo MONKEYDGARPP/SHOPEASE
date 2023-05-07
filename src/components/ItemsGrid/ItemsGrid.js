@@ -15,7 +15,7 @@ function ItemsGrid() {
     <><h2 className='items-grid-h2'>Trending Products</h2>
     <div className="items-grid">
       <div className="row">
-        {productsData.slice(0, 8).map((item) => (
+        {productsData.slice(0, 4).map((item) => (
           <div key={item._id} className="item">
             <img src={item.image} alt={`Item ${item._id}`} className="item-image" />
             {item.rating} | {item.reviews}
@@ -52,7 +52,7 @@ function ItemsGrid() {
         ))}
       </div>
       <div className="row">
-        {productsData.slice(8, 16).map((item) => (
+        {productsData.slice(4, 8).map((item) => (
           <div key={item._id} className="item">
             <img src={item.image} alt={`Item ${item._id}`} className="item-image" />
             {item.rating}☆ | {item.reviews}

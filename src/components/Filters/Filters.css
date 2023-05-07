@@ -7,15 +7,16 @@
     flex-direction: column;
     width: 20%;
     margin: 10px;
-    height: 80vh;
+    height: 39vh;
     border:1px solid gray;
     border-radius: 10px;
   }
   
   .title {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-decoration: underline;
     white-space: nowrap;
+    font-weight: bold;
   }
 
 .filters_options{
@@ -23,7 +24,13 @@
     flex-direction: column;
 }  
 .filters_options span {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+.radio-container {
+  font-size: medium;
+}
+.radio-container input {
+  margin-left: 2px;
 }
 .link-cart-icon {
   margin-top: 20px;
@@ -32,5 +39,15 @@
 }
 a {
   text-decoration: none;
-  color: ;
+}
+label{
+  font-weight: bold;
+}
+p{
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .filters {
+    height: 65vh;
+  }
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import { CartState } from '../../context/Context';
 import { Link } from 'react-router-dom';
 import './Cart.css'
+import {BsArrowReturnLeft} from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 
 
 const Cart = () => {
@@ -11,6 +13,8 @@ const Cart = () => {
       } = CartState();
       
 console.log(cart);
+const navigate = useNavigate();
+
 // const cart_size = cart.length;
 const totalQty = cart.reduce((acc, curr) => acc + curr.qty, 0);
 const cartWithIndividualPrice = cart.map(item => {
@@ -24,9 +28,12 @@ const totalPrice = cartWithIndividualPrice.reduce((acc, curr) => acc + curr.pric
   return (
     <div class="cart-page">
     <div className='cart_page'>
+    <BsArrowReturnLeft fontSize="25px" onClick={() => navigate(`/products`)}/>
+    <h2>Your Cart</h2>
         {cart.map((prod)=>(
             <div className='cart_items'>
               <img src={prod.image} alt="cart_item" />
+              <div class="cart-items-details">
               <div class="cart-item-details">
               <p style={{ fontWeight: 'bold' }}>{prod.title}</p>
             <p>Price : {prod.price}</p>
@@ -56,27 +63,31 @@ const totalPrice = cartWithIndividualPrice.reduce((acc, curr) => acc + curr.pric
             </div>
             </div>
             </div>
+            </div>
         ))}
     </div>
     <div class="cart-checkout-buttons">
       <div class="checkout-buttons">
+    <div class="right-side-cart">
+    <div class="details-of-cart">
+      <div class="apply-coupons">
+      <h4>Apply Coupons</h4>
+      <button className='coupon-button'>Apply</button>
+      </div>
+    <div class="total-price-of-cart">
+      <p>Cart Items : {totalQty}</p>
+      <p>Total Price : {totalPrice}</p>
+    {/* <button class="cart-button">Checkout</button> */}
+    </div>
     <button className='cart-button'
     onClick={()=>
     dispatch({
       type:"CLEAR_CART"
     })}
     >Clear Cart</button>
-    {/* <button class="cart-button">Checkout</button> */}
-    
-    </div>
-    <div class="details-of-cart">
-      <h4>Apply Coupons</h4>
-      <button className='coupon-button'>Apply</button>
-    </div>
-    <div class="total-price-of-cart">
-      <p>Cart Items : {totalQty}</p>
-      <p>Total Price : {totalPrice}</p>
       <Link to='/checkout'> <button className='checkout-button' >Checkout</button></Link>
+    </div>
+    </div>
     </div>
     </div>
     </div>

@@ -13,11 +13,11 @@ const Filters = () => {
 
   return (
     <div class="filters">
-        <span className="title">Filter Products</span>
+        <span className="title">Filters</span>
         <div class="filters_options">
         <span>
         <label className="radio-container">
-            Ascending
+            Price - Low to high
             <input
                 type="radio"
                 name="group1"
@@ -34,7 +34,7 @@ const Filters = () => {
         </span>
         <span>
             <label>
-                Descending
+            Price - High to low
                 <input 
                 type="radio"
                 onChange={()=>
@@ -101,7 +101,6 @@ const Filters = () => {
           })
         }>Clear Filters</button>
         </div>
-        <Link to="/cart" className='link-cart-icon'><AiOutlineShoppingCart size={42} color='Black'/></Link>
     </div>
   )
 }

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <header className="header">
+    <div className="header">
       <Link to="/">
       <div className="logo">ShopEasy</div>
       </Link>
@@ -17,7 +17,7 @@ function Header() {
       <div className="cart-icon">
       <Link to="/cart"><AiOutlineShoppingCart size={42} /></Link>
       </div>
-    </header>
+    </div>
   );
 }
 

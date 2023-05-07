@@ -2,7 +2,10 @@ import React from "react";
 import { CartState } from "../../context/Context";
 import './SingleProduct.css'
 import Rating from "../Rating/Rating"
+import { useNavigate } from 'react-router-dom';
+
 const SingleProduct = ({ prod }) => {
+  const navigate = useNavigate();
   // console.log(prod.name);
   const {
     state: { cart },
@@ -12,7 +15,7 @@ const SingleProduct = ({ prod }) => {
   // console.log(prod);
   return (
     <div className="product-card">
-      <img src={prod.image} alt={prod.name} />
+      <img src={prod.image} alt={prod.name} onClick={() => navigate(`/product/${prod._id}`)}/>
       <h2>{prod.title}</h2>
       <p className="price">₹{prod.price}</p>
       <div className="ratings">

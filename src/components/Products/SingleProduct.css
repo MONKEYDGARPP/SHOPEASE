@@ -1,18 +1,21 @@
 .product-card {
   width: 200px;
-  height: 50vh;
+  height: 330px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   margin-right: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  background-color: #f3f0f0;
+  
 }
 
 .product-card img {
   width: 80%;
   height: auto;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .product-card h2 {
@@ -30,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .star {
@@ -49,9 +52,10 @@
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.2s;
+  width: 100%;
+  padding: 5px;
 }
 
 .add-to-cart:hover {
