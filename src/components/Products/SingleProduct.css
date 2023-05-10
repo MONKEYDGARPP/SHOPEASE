@@ -1,16 +1,18 @@
 .product-card {
   width: 200px;
-  height: 330px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  height: auto;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
   padding: 10px;
   text-align: center;
   margin-right: 15px;
   margin-bottom: 15px;
-  background-color: #f3f0f0;
-  
+  background-color: #ffffff;
+  outline: 2px solid rgba(0, 0, 0, .205);
 }
-
+.product-card:hover{
+  outline: 2px solid rgba(0, 0, 0, .7);
+}
 .product-card img {
   width: 80%;
   height: auto;
@@ -51,7 +53,6 @@
   background-color: #0066cc;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
   width: 100%;
@@ -64,4 +65,13 @@
 .reviews{
   margin: 0;
   font-size: 10px;
+}
+.remove-from-cart{
+  background-color: rgb(229, 39, 39);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  padding: 5px;
 }

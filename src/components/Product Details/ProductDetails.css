@@ -66,20 +66,32 @@ img{
     justify-content: center;
     align-items: center;
 }
-.product-details-footer button {
-    width: 100%;
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 5px;
-}
+
 .add-to-cart{
     background-color: #0066cc;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
     width: 100%;
-    padding: 5px;
+    padding: 10px;
+}
+.remove-from-cart{
+  background-color: rgb(229, 39, 39);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+  padding: 10px;
+}
+.go-to-cart{
+    background-color: rgb(55, 55, 168);
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+    padding: 10px;
 }

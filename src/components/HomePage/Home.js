@@ -5,6 +5,7 @@ import React from "react";
 import HomePage from "../HomePageBanner/HomePage";
 // import ItemsGrid from "../ItemsGrid/ItemsGrid";
 import ProductCategories from "../ProductCategories/ProductCategories";
+import HomePageBanner from "../HomePageBanner/HomePageBanner";
 
 const Home = () => {
   // const {
@@ -15,8 +16,9 @@ const Home = () => {
   return (
     <>
       <HomePage />
-      {/* <ItemsGrid /> */}
       <ProductCategories />
+      <HomePageBanner />
+      {/* <ItemsGrid /> */}
     </>
   );
 };

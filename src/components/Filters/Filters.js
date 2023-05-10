@@ -3,8 +3,10 @@ import { CartState } from "../../context/Context";
 import './Filters.css'
 // import { Link } from 'react-router-dom';
 // import { AiOutlineShoppingCart } from 'react-icons/ai';
-
+import { useNavigate } from "react-router-dom";
 const Filters = () => {
+    const navigate = useNavigate();
+
     const {
         productDispatch,
         productState: { byStock, byFastDelivery, sort, byRating },
@@ -100,6 +102,7 @@ const Filters = () => {
             type: "CLEAR_FILTERS",
           })
         }>Clear Filters</button>
+        <button onClick={() => navigate('/cart')}>Go to Cart</button>
         </div>
     </div>
   )
