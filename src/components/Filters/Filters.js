@@ -4,7 +4,6 @@ import './Filters.css'
 // import { Link } from 'react-router-dom';
 // import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { useNavigate } from "react-router-dom";
-
 const Filters = () => {
     const navigate = useNavigate();
 
