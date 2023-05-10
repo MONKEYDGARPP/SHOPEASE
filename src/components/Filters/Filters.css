@@ -7,9 +7,10 @@
     flex-direction: column;
     width: 20%;
     margin: 10px;
-    height: 39vh;
-    border:1px solid gray;
-    border-radius: 10px;
+    height: 40vh;
+    outline: 2px solid rgba(0, 0, 0, .205);
+    /* border:1px solid gray; */
+    /* border-radius: 10px; */
   }
   
   .title {
@@ -30,7 +31,7 @@
   font-size: medium;
 }
 .radio-container input {
-  margin-left: 2px;
+  margin-left: 4px;
 }
 .link-cart-icon {
   margin-top: 20px;
@@ -45,6 +46,9 @@ label{
 }
 p{
   font-weight: bold;
+}
+.filters_options button{
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
   .filters {
