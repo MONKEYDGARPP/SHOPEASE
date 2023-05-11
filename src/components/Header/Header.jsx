@@ -7,8 +7,11 @@ import { CartState } from '../../context/Context';
 function Header() {
   // const [toggleMenu, setToggleMenu] = useState(false);
   const {
-    productDispatch
+    productDispatch,
+    state: { cart },
   } = CartState();
+
+  const length = cart.length;
 
   const handleFilterByDelivery = (gender) => {
     productDispatch({type:"FILTER_BY_GENDER", payload:gender})
