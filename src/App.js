@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 import Checkout from "./components/Checkout/Checkout";
 import Payment from "./components/Payment/Payment";
 import ProductDetails from "./components/Product Details/ProductDetails";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/payment" element={<Payment />}/>
           <Route path="/product/:id" element={<ProductDetails />}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
