@@ -3,20 +3,26 @@ import './Header.css';
 import { Link } from 'react-router-dom';
 import {CiSearch} from 'react-icons/ci'
 import {CgShoppingCart} from 'react-icons/cg'
-
+import { CartState } from '../../context/Context';
 function Header() {
   // const [toggleMenu, setToggleMenu] = useState(false);
-  return (
+  const {
+    productDispatch
+  } = CartState();
 
+  const handleFilterByDelivery = (gender) => {
+    productDispatch({type:"FILTER_BY_GENDER", payload:gender})
+  }
+  return (
      <nav>
       <Link to='/'>
         <h2 className='nav-h2'>ShopEasy</h2>
       </Link>
       <ul className='nav-links'>
-        <Link to='/products'><li>Female</li></Link>
-        <Link to='/products'><li>Male</li></Link>
-        <Link to='/products'><li>Kids</li></Link>
-        <Link to='/products'><li>All Products</li></Link>
+        <Link to='/products'><li onClick={()=>handleFilterByDelivery('women')}>Female</li></Link>
+        <Link to='/products'><li onClick={()=>handleFilterByDelivery('men')}>Male</li></Link>
+        <Link to='/products'><li onClick={()=>handleFilterByDelivery('kids')}>Kids</li></Link>
+        <Link to='/products'><li onClick={()=>handleFilterByDelivery('')}>All Products</li></Link>
       </ul>
 
         <div className='search-bar'>

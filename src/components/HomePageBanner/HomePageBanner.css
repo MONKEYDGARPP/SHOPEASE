@@ -90,6 +90,8 @@
     font-size: 0.875rem;
     width: 50%;
   }
+
+
   @media screen and (max-width: 1290px) {
     .features-section .title,
   .features-section .content {
