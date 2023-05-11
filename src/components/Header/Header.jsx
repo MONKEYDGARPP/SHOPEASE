@@ -7,8 +7,12 @@ import { CartState } from '../../context/Context';
 function Header() {
   // const [toggleMenu, setToggleMenu] = useState(false);
   const {
-    productDispatch
+    productDispatch,
+    state: { cart },
   } = CartState();
+
+  const length = cart.length
+  console.log(length)
 
   const handleFilterByDelivery = (gender) => {
     productDispatch({type:"FILTER_BY_GENDER", payload:gender})
@@ -34,6 +38,7 @@ function Header() {
         <Link to='/cart'>
         <button className='cart'>   
           <CgShoppingCart size={22} />
+          <span>{length}</span>
         </button>
       </Link> 
     </nav>
