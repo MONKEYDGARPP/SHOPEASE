@@ -34,6 +34,7 @@ function Header() {
         <Link to='/cart'>
         <button className='cart'>   
           <CgShoppingCart size={22} />
+          <span>{length}</span>
         </button>
       </Link> 
     </nav>
