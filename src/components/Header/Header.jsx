@@ -17,6 +17,13 @@ function Header() {
   const handleFilterByDelivery = (gender) => {
     productDispatch({type:"FILTER_BY_GENDER", payload:gender})
   }
+
+  const handleSearch = (e) => {
+    productDispatch({
+      type:"FILTER_BY_SEARCH",
+      payload: e.target.value,
+    })
+  }
   return (
      <nav>
       <Link to='/'>
@@ -33,7 +40,7 @@ function Header() {
           <CiSearch />
           <input 
             type='text' 
-            placeholder='What you looking for'/>
+            placeholder='What you looking for' onChange={handleSearch}/>
         </div>
         <Link to='/cart'>
         <button className='cart'>   
