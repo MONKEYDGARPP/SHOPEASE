@@ -12,7 +12,6 @@ function Header() {
   } = CartState();
 
   const length = cart.length
-  console.log(length)
 
   const handleFilterByDelivery = (gender) => {
     productDispatch({type:"FILTER_BY_GENDER", payload:gender})
