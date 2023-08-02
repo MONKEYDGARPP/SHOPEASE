@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom';
 import {CiSearch} from 'react-icons/ci'
 import {CgShoppingCart} from 'react-icons/cg'
 import { CartState } from '../../context/Context';
+
+
 function Header() {
   // const [toggleMenu, setToggleMenu] = useState(false);
   const {
     productDispatch,
     state: { cart },
+    loggedin,
+    loginDispatch,
   } = CartState();
 
   const length = cart.length
-
   const handleFilterByDelivery = (gender) => {
     productDispatch({type:"FILTER_BY_GENDER", payload:gender})
   }
@@ -23,6 +26,17 @@ function Header() {
       payload: e.target.value,
     })
   }
+
+  const handleLogin = () => {
+    loginDispatch({ type: "LOG_IN" });
+    console.log(loggedin)
+  }
+
+  const handleLogout = () => {
+    loginDispatch({ type: "LOG_OUT" });
+  }
+  console.log(loggedin)
+
   return (
      <nav>
       <Link to='/'>
@@ -41,12 +55,29 @@ function Header() {
             type='text' 
             placeholder='What you looking for' onChange={handleSearch}/>
         </div>
-        <Link to='/cart'>
-        <button className='cart'>   
-          <CgShoppingCart size={22} />
-          <span>{length}</span>
-        </button>
-      </Link> 
+        <div className="signup-login">
+          {
+          loggedin.isLoggedIn ? null : <button className='auth-button'>Signup</button>
+          }
+          { 
+          loggedin.isLoggedIn ? null : <button className='auth-button' onClick={handleLogin}>Login</button>
+          }
+          {
+            loggedin.isLoggedIn ? <button className='auth-button' onClick={handleLogout}>Logout</button> : null
+          }
+        </div>
+
+        {
+          loggedin.isLoggedIn ? (
+            <Link to='/cart'>
+              <button className='cart'>
+                <CgShoppingCart size={22} />
+                <span>{length}</span>
+              </button>
+            </Link>
+          ) : null
+        }
+        
     </nav>
   );
 }
