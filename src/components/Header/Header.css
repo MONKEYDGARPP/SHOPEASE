@@ -71,6 +71,20 @@ nav input {
   color: white;
   border-radius: 50%;
 }
+
+.auth-button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: 0.5px solid black;
+  color: black;
+  margin: 5px;
+}
+
 @media screen and (max-width: 1000px) {
   nav {
     margin: 4rem;
