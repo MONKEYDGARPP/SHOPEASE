@@ -1,7 +1,7 @@
 import { createContext, useContext, useReducer } from "react";
-import { cartReducer } from "./Reducers";
-import { productReducer } from "./Reducers";
-import { authReducer } from "./Reducers";
+import { cartReducer } from "../reducers/cartReducer";
+import { productReducer } from "../reducers/productReducer";
+import { authReducer } from "../reducers/authReducer";
 import productsData from "../db/data";
 
 const Cart = createContext();
@@ -25,7 +25,7 @@ const Context = ({ children }) => {
     isLoggedIn: false,
   });
 
-  console.log(productState);
+  // console.log(productState);
 
   return (
     <Cart.Provider
